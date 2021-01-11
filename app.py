@@ -31,8 +31,10 @@ import plotly.figure_factory as ff
 import plotly.graph_objects as go
 
 
+external_stylesheets = [dbc.themes.LITERA]
 server = flask.Flask(__name__)
-app = dash.Dash(__name__, server=server)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
+colors = {'background': '#F1EEE6'}
 
 #Load  data 
 def load_csv(path):
@@ -127,16 +129,6 @@ algorithm = dfa.columns.unique().tolist()
 
 
 #Dash code
-#Dash code
-
-external_stylesheets = [dbc.themes.LITERA]
-
-server = flask.Flask(__name__)
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
-
-colors = {'background': '#F1EEE6'}
-
-
 app.layout = html.Div([
     dcc.Tabs(id="tabs-with-classes",
              parent_className='custom-tabs',
