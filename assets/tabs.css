@@ -1,0 +1,43 @@
+$animate: all 0.2s ease-in-out;
+
+.custom-tabs-container {
+    font-family: "Open Sans";
+    background-color: #f1eee6;
+    width: 94%;
+    margin-left:3%;
+    margin-right:3%;
+    margin-top:1.5%;
+}
+
+.custom-tabs {
+    font-family: "Open Sans";
+    background-color: #f1eee6;
+
+    
+
+}
+
+.custom-tab {
+    padding: 12px !important;
+    font-family: "Open Sans";
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-tab--selected {
+    font-family: "Open Sans";
+    color: #2D2926 !important;
+    border-left: 0px solid lightgrey !important;
+    border-right: 0px solid lightgrey !important;
+    background-color: #f1eee6 !important;
+
+}
+
+.custom-tab:hover {
+  text-decoration: underline #005c9f;
+    text-decoration-thickness: 5px;
+    font-weight: 700, 
+    
+}
+
