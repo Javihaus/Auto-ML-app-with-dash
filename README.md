@@ -1,6 +1,8 @@
-# Developing and Deploying Dash via Heroku
+# AUTO ML APP: Developing and Deploying Dash via Heroku
 
-Creating a Dash app to check a pandas dataframe including a time series column with other numerical columns. Dash app allows to compare pair of columns and visualize each column's time series. 
+Creating aN AUTO ML Dash from a dataset. Includes classification and time series alorithms. The app implements an explained-ML philosophy. Classification includes dimensionality reduction with t-sne for visualization and PCA. Classification uses simple Logistic Regression and Support Linear Vector. Time series include autocorrelation and XGBoost Regression. All algorithms intent to be explained. 
+
+To deploy an app like this: 
 
 1. Setup account on Heroku
 2. Create a new app and deploy using GitHub. Connect to your Github repo where app files are. 
