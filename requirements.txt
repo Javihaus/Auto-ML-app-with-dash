@@ -1,7 +1,7 @@
 pandas
 numpy
 scipy
-scipy.cluster
+scipy-cluster
 gunicorn
 plotly>=4.1.0
 plotly_express
