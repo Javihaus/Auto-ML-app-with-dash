@@ -4,8 +4,8 @@ scipy
 gunicorn
 plotly>=4.1.0
 plotly_express
-plotly.figure_factory
-plotly.graph_objects
+plotly_figure_factory
+plotly_graph_objects
 chart-studio==1.0.0
 dash
 dash-renderer
