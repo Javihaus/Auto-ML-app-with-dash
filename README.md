@@ -5,5 +5,4 @@ Creating aN AUTO ML Dash from a pandas dataframe. Includes classification and ti
 Web app: https://auto-ml-app.herokuapp.com/
 
 # Classification Algorithm
-![alt text](https://github.com/[Javihaus]/[Auto-ML-app_with-dash]/blob/[main]/Introduction.png?raw=true)
-
+!![assets](Introduction.png)
