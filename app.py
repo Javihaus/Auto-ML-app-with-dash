@@ -19,7 +19,6 @@ from sklearn.metrics import auc, accuracy_score, confusion_matrix, mean_squared_
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-import autosklearn.classification
 from sklearn import metrics
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
