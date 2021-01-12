@@ -15,4 +15,4 @@ Web app: https://auto-ml-app.herokuapp.com/
 
 ![main](/assets/Trees.png)
 
-![main](/assets/Splits.png)
+![main](/assets/Split.png)
