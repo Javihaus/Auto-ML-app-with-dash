@@ -22,6 +22,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
+import statsmodels.api as sm
 import xgboost as xgb
 from xgboost import XGBRegressor 
 import gc
