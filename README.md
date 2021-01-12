@@ -9,9 +9,15 @@ Web app: https://auto-ml-app.herokuapp.com/
 
 ![main](/assets/Introduction.png)
 
+![main](/assets/Autocorrelation.png)
+
 ![main](/assets/Dendogram.png)
 
 ![main](/assets/Manifold.png)
+
+![main](/assets/ClassAlgorithm.png)
+
+![main](/assets/Dependence.png)
 
 # Forecasting Algorithms
 
