@@ -149,6 +149,16 @@ app.layout = html.Div([
                 'margin-top':'5%',
             
         }),
+    html.P('Copyright Javier Marín (2021). MIT license. ' ,
+            style={
+                'font-family': 'Open Sans',
+                'font-size':'20px',
+                'padding':'25px', 
+                'font-weight': '400', 
+                'background-color': '#F1EEE6',
+                'margin-left':'2%',
+                'margin-top':'3%',            
+        }),
     html.P('We have used open data sources to describe the fitness industry in Spain in 2020. We want to know more about the growing perspectives of this industry according users insights about gyms. We have selected only a few features related with consumers attitudes and motivations regarding this industry. Below you can see each feature explanation and source.  ' ,
             style={
                 'font-family': 'Open Sans',
@@ -1033,8 +1043,9 @@ app.layout = html.Div([
      Input('yaxis-column', 'value')])
 
 def update_graph(xaxis_column, yaxis_column):   
-    fig = px.scatter(df_original, x=xaxis_column,y=yaxis_column, 
-                    trendline='lowess', trendline_color_override='crimson',
+    fig = px.scatter(df_original, 
+                     x=xaxis_column,
+                     y=yaxis_column,
                      template='plotly_white')
     fig.update_traces(marker=dict(size=5, color='#0f4c81'))
     fig.update_layout({'paper_bgcolor': '#ffffff',
@@ -1048,9 +1059,10 @@ def update_graph(xaxis_column, yaxis_column):
 
 def update_x_timeseries(xaxis_column):
     
-    fig = px.scatter(df_original, x='date', y=xaxis_column,
-                    trendline='lowess', trendline_color_override='crimson',
-                    template='plotly_white')
+    fig = px.scatter(df_original, 
+                     x='date',
+                     y=xaxis_column, 
+                     template='plotly_white')
     fig.update_traces(marker=dict(size=5, color='#0f4c81'))
     fig.update_layout({'paper_bgcolor': '#ffffff',
                   'plot_bgcolor': '#ffffff'})
@@ -1062,9 +1074,10 @@ def update_x_timeseries(xaxis_column):
     [Input('yaxis-column', 'value')])
 
 def update_y_timeseries(yaxis_column):   
-    fig = px.scatter(df_original, x='date', y=yaxis_column,
-                    trendline='lowess', trendline_color_override='crimson',
-                    template='plotly_white')
+    fig = px.scatter(df_original,
+                     x='date', 
+                     y=yaxis_column, 
+                     template='plotly_white')
     fig.update_traces(marker=dict(size=5, color='#0f4c81'))
     fig.update_layout({'paper_bgcolor': '#ffffff',
                   'plot_bgcolor': '#ffffff'})
