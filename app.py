@@ -389,7 +389,7 @@ app.layout = html.Div([
                 'margin-top':'5%',
             
         }),
-        html.P('Choose the features you consider are the most interesting, or, remove the ones you think are not going to be useful. We will start plotting its correlation' ,
+        html.P('Choose the features you consider are the most interesting, or remove the ones you think are not going to be useful. We will start plotting its correlation' ,
             
             style={
                 'font-family': 'Open Sans', 
@@ -441,7 +441,7 @@ app.layout = html.Div([
                 'margin-top':'3%',
                     }
             ),           
-            html.P('To predict a feature ("target") as a combination of the rest of features, select  target and will calculate the general variables importance to predict this target in a general classification.' ,            
+            html.P('To predict a target feature as a combination of the rest of features, select target and we will calculate the general variables importance to predict this target in a general classification.' ,            
             style={ 
                 'font-family': 'Open Sans',
                 'font-size':'20px',
@@ -495,7 +495,7 @@ app.layout = html.Div([
                 'width': '80%', 
                 'margin-bottom':'5%', 
         }),
-        html.P('There are special algorithms that performs what is called "dimensionality reduction". In our case we would like to have all data from our 11 dimensional space embeded into a 2 dimensional space. So we could visualize interesting information from data as for example if is separable (classificable). For doing that we are going to use a very interesting algorithm: "t-DISTRIBUTED STOCHASTIC NEIGHBOR EMBEDDING" that takes a set of points in a high-dimensional space and find a "faithful" representation of these points in a lower-dimensional space. t-sne algorithm is very useful in Machine Learning and also for quantum physics, genetics, thermodynamics, and even gambling. How does it work? Maths behind are hard, but intuitively we can say we create a new low dimensionality representation of this high-dimensionality data by calculating distances betwen points and measuring how much information we learn with our new representation having already known about the data. Algortihm minimizes this amount of information difference in order to be minimum. Ideally the information amount should be the same, but in practice the excercise of creating the new representation forces us to make several assumptions. The ideia is that we do not have to gain information from original data and new representation has to be very close in information value, otherwise we are creating a new dataset ' ,            
+        html.P('There are special algorithms that performs what is called "dimensionality reduction". In our case we would like to have all data from our 11 dimensional space embeded into a 2 dimensional space. So we could visualize interesting information from data as for example if is separable (classificable). For doing that we are going to use a very interesting algorithm: "t-DISTRIBUTED STOCHASTIC NEIGHBOR EMBEDDING" that takes a set of points in a high-dimensional space and find a "faithful" representation of these points in a lower-dimensional space. t-sne algorithm is very useful in Machine Learning and also for quantum physics, genetics, thermodynamics, and even gambling. How does it work? Maths behind are hard, but intuitively we can say we create a new low dimensionality representation of this high-dimensionality data by calculating distances betwen points and measuring how much information we learn with our new representation having already known about the data. Algortihm minimizes this amount of information difference in order to be minimum. Ideally the information amount should be the same, but in practice the excercise of creating the new representation forces us to make several assumptions. The idea is that we do not have to gain information from original data and new representation has to be very close in information value, otherwise we are creating a new dataset. Alorithms task is to get another representation having very similar information than original dataset. ' ,            
             style={ 
                 'font-family': 'Open Sans',
                 'font-size':'20px',
@@ -503,7 +503,7 @@ app.layout = html.Div([
                 'background-color': '#F1EEE6',
                 'margin-left':'6%',
                 'margin-top':'1%',
-                'margin-bottom':'1%',
+                'margin-bottom':'2%',
                     }
                 ),
         html.Div([
