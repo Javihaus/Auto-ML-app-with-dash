@@ -34,3 +34,6 @@ Web app: https://auto-ml-app.herokuapp.com/
 - Understanding LSTM Networks (http://colah.github.io/posts/2015-08-Understanding-LSTMs/), (http://blog.echen.me/2017/05/30/exploring-lstms/)
 - T. Chen, C. Guestrin, "XGBoost: A Scalable Tree Boosting System" , arXiv:1603.02754v3 (https://arxiv.org/abs/1603.02754v3)
 - Christopher Olah for inspiration (http://colah.github.io/posts/2015-09-Visual-Information/)
+
+
+<code>pip install -r requirements.txt </code>
