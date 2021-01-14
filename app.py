@@ -30,12 +30,10 @@ import plotly.express as px
 import plotly.figure_factory as ff
 import plotly.graph_objects as go
 from datetime import timedelta
-import config
 
 external_stylesheets = [dbc.themes.LITERA]
 server = flask.Flask(__name__)
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
-app.config.supress_callback_exceptions = True
 colors = {'background': '#F1EEE6'}
 
 #Load  data 
