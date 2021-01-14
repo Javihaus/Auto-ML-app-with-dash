@@ -26,3 +26,7 @@ Web app: https://auto-ml-app.herokuapp.com/
 ![main](/assets/Trees.png)
 
 ![main](/assets/Split.png)
+
+# Credits
+
+- Christopher Olah for inspiration http://colah.github.io/posts/2015-09-Visual-Information/
