@@ -1023,6 +1023,7 @@ def update_graph(xaxis_column, yaxis_column):
                      x=xaxis_column,
                      y=yaxis_column,
                      template='plotly_white')
+    fig.update_traces(contours_coloring="fill", contours_showlabels = True)
     fig.update_layout({'paper_bgcolor': '#ffffff',
                   'plot_bgcolor': '#ffffff'})
     return fig
