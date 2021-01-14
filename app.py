@@ -340,34 +340,10 @@ app.layout = html.Div([
                 'border-radius': '5px', 
                 'background-color': '#F1EEE6' , 
                 'margin-left': '75px', 
-                'margin-bottom': '70px'}),
+                'margin-bottom': '70px'
+         }),
         
-        html.Div([
-        dcc.Graph(id='x-time-series'
-        
-        )], 
-            style={
-                'width': '40%', 
-                'display': 'inline-block',
-                'box-shadow': '10px 5px 12px #DBCBBE',
-                'border-radius': '5px', 
-                'background-color': '#F1EEE6' , 
-                'margin-left': '75px', 
-                'margin-right': '50px'}),
-  
-        html.Div([
-        dcc.Graph(id='y-time-series'
-        
-        )],
-            style={
-                'width': '40%',
-                'display': 'inline-block',
-                'box-shadow': '10px 5px 12px #DBCBBE',
-                'border-radius': '5px', 
-                'background-color': '#F1EEE6', 
-              }),
-        
-        html.P('We hace ploted pairs of variables and also its time-series plots. We have seen how variables are correlated by pairs. All conclusions from this visual exploration are needed to understant a bit more the dataset and the relation betwen variables.  We can include in this comparison the feature we are going to select as "target" and plot aginst other features to see partial dependences in the data set. Rememember that or problem is that we want to know the dependece of all features together with the target variable. If we plot the relation of a feature with our target its a partial dependence because give us only partial information. ' ,
+        html.P('We have represented pairs of variables in a contour plot. We have seen how variables are correlated by pairs. All conclusions from this visual exploration are needed to understant a bit more the dataset and the relation betwen variables.  We can include in this comparison the feature we are going to select as "target" and plot aginst other features to see partial dependences in the data set. Rememember that or problem is that we want to know the dependece of all features together with the target variable. If we plot the relation of a feature with our target its a partial dependence because give us only partial information. ' ,
             style={
                 'font-family': 'Open Sans',
                 'font-size':'20px',
@@ -1043,45 +1019,14 @@ app.layout = html.Div([
      Input('yaxis-column', 'value')])
 
 def update_graph(xaxis_column, yaxis_column):   
-    fig = px.scatter(df_original, 
+    fig = px.density_contour(df_original, 
                      x=xaxis_column,
                      y=yaxis_column,
                      template='plotly_white')
-    fig.update_traces(marker=dict(size=5, color='#0f4c81'))
     fig.update_layout({'paper_bgcolor': '#ffffff',
                   'plot_bgcolor': '#ffffff'})
     return fig
 
-
-@app.callback(
-    Output('x-time-series', 'figure'),
-    [Input('xaxis-column', 'value')])
-
-def update_x_timeseries(xaxis_column):
-    
-    fig = px.scatter(df_original, 
-                     x='date',
-                     y=xaxis_column, 
-                     template='plotly_white')
-    fig.update_traces(marker=dict(size=5, color='#0f4c81'))
-    fig.update_layout({'paper_bgcolor': '#ffffff',
-                  'plot_bgcolor': '#ffffff'})
-    return fig
-
-
-@app.callback(
-    Output('y-time-series', 'figure'),
-    [Input('yaxis-column', 'value')])
-
-def update_y_timeseries(yaxis_column):   
-    fig = px.scatter(df_original,
-                     x='date', 
-                     y=yaxis_column, 
-                     template='plotly_white')
-    fig.update_traces(marker=dict(size=5, color='#0f4c81'))
-    fig.update_layout({'paper_bgcolor': '#ffffff',
-                  'plot_bgcolor': '#ffffff'})
-    return fig
 
 @app.callback(
     Output('correlation', 'figure'),
