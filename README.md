@@ -35,5 +35,3 @@ Web app: https://auto-ml-app.herokuapp.com/
 - T. Chen, C. Guestrin, "XGBoost: A Scalable Tree Boosting System" , arXiv:1603.02754v3 (https://arxiv.org/abs/1603.02754v3)
 - Christopher Olah for inspiration (http://colah.github.io/posts/2015-09-Visual-Information/)
 
-
-<code>pip install -r requirements.txt </code>
