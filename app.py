@@ -1101,7 +1101,10 @@ def update_graph(variable_list):
     Input('variable_list', 'value')])
 
 def update_graph_tsne(target, variable_list):
-    df1=df[variable_list]
+    df['date'] = pd.to_datetime(df['date'])
+    df.set_axis(df['date'], inplace=True)
+    df0 = df.resample('5d').mean()
+    df1=df0[variable_list]
     X = df1.drop(columns=[target])
     X = X.fillna(method='ffill')
     X = X.fillna(method='backfill')
