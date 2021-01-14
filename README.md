@@ -28,5 +28,9 @@ Web app: https://auto-ml-app.herokuapp.com/
 ![main](/assets/Split.png)
 
 # Credits
-
-- Christopher Olah for inspiration http://colah.github.io/posts/2015-09-Visual-Information/
+- DASH  (https://plotly.com/dash/)
+- PYMC3 (https://docs.pymc.io/)
+- Wattenberg, et al., "How to Use t-SNE Effectively", Distill, 2016 (https://distill.pub/2016/misread-tsne/)
+- Understanding LSTM Networks (http://colah.github.io/posts/2015-08-Understanding-LSTMs/), (http://blog.echen.me/2017/05/30/exploring-lstms/)
+- T. Chen, C. Guestrin, "XGBoost: A Scalable Tree Boosting System" , arXiv:1603.02754v3 (https://arxiv.org/abs/1603.02754v3)
+- Christopher Olah for inspiration (http://colah.github.io/posts/2015-09-Visual-Information/)
