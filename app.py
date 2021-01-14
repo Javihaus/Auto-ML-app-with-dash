@@ -34,7 +34,6 @@ from datetime import timedelta
 external_stylesheets = [dbc.themes.LITERA]
 server = flask.Flask(__name__)
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=server)
-app.config['PERMANENT_SESSION_LIFETIME'] =  timedelta(minutes=5)
 colors = {'background': '#F1EEE6'}
 
 #Load  data 
@@ -129,7 +128,7 @@ algorithm = dfa.columns.unique().tolist()
 
 
 
-#Dash code
+#dash/html code
 app.layout = html.Div([
     dcc.Tabs(id="tabs-with-classes",
              parent_className='custom-tabs',
@@ -1400,8 +1399,8 @@ def xgboost(yaxis_column2):
     dfn = dfn.resample('m').mean()
     y_data = dfn[target].values
     X_train, X_test, y_train, y_test = train_test_split(np.arange(0,len(dfn)), y_data, test_size=0.33, random_state=42)
-    X=X_train.reshape((-1,1))
-    y=y_train.reshape((-1,1))
+    X = X_train.reshape((-1,1))
+    y = y_train.reshape((-1,1))
     xgb_model = XGBRegressor(n_estimators=25,
                          learning_rate=0.5, # Etha=Range[0-1], default=0.3
                          max_depth=6, # default = 6
@@ -1416,7 +1415,7 @@ def xgboost(yaxis_column2):
             #verbose=False
             )
     y_pred = xgb_model.predict(X_test.reshape((-1,1)))
-    mse=mean_squared_error(y_test, y_pred)
+    mse = mean_squared_error(y_test, y_pred)
     #start plot
     trace1 = go.Scatter(
     x = df.index,
